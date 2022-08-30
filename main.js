@@ -18,6 +18,22 @@ document.getElementById("icon-plus").addEventListener('click', () =>{
 
 })
 
+let thumbnails = document.querySelectorAll(".product-thumbnail")
+let images = document.querySelectorAll(".product-image")
+
+for(let i = 0; i < thumbnails.length; i++){
+    thumbnails[i].addEventListener('click', () =>{
+        for(let j = 0; i < images.length; j++){
+            if(i === j){
+                images[j].style.display = "flex"
+            }
+            else{
+                images[j].style.display = "none"
+            }
+        }
+    })
+}
+
 
 document.getElementById("icon-minus").addEventListener('click', () =>{
     clicked--
@@ -46,7 +62,7 @@ const setSlides = (num) =>{
 }
 
 
-document.getElementById("product-image").addEventListener('click', () =>{
+document.querySelector(".product-image").addEventListener('click', () =>{
     slider.style.display = "block"
     slider.style.backgroundColor = "rgba(0, 0, 0, 0.75)"
     slider.style.width = "100%"
