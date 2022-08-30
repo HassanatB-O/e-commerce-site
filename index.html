@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>E-commerce Product Page</title>
+</head>
+<body>
+    <div class="menu">
+        <img src="images/icon-close.svg" alt="" class="close-menu" style="cursor: pointer;">
+        <div class="list">
+            <p>Collections</p>
+            <p>Men</p>
+            <p>Women</p>
+            <p>About</p>
+            <p>Contact</p>
+        </div>
+    </div>
+    <main id="main">
+        <nav>
+            <div style="display: flex">
+                <div>
+                    <img src="images/icon-menu.svg" alt="hamburger icon" class="icon-menu">
+                </div>
+                <div>
+                    <img src="images/logo.svg" alt="sneakers logo" class="logo">
+                </div>
+            </div>
+            <ul>
+                <li>Collections</li>
+                <li>Men</li>
+                <li>Women</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+            <div class="nav-logos">
+                <img src="images/icon-cart.svg" alt="cart-icon" class="cart-icon">
+                <sup id="superscript"></sup>
+                <img src="images/image-avatar.png" alt="avatar of a male with curly hair" class="avatar">
+            </div>
+        </nav>
+        <hr>
+        <div class="container">
+            <section class="shop-section">
+                <div class="images">
+                    <img src="images/image-product-1.jpg" alt="" id="product-image">
+                    <div class="thumbnails">
+                        <img src="images/image-product-1-thumbnail.jpg" alt="product-thumbnail" class="product-thumbnail">
+                        <img src="images/image-product-2-thumbnail.jpg" alt="product-thumbnail" class="product-thumbnail">
+                        <img src="images/image-product-3-thumbnail.jpg" alt="product-thumbnail" class="product-thumbnail">
+                        <img src="images/image-product-4-thumbnail.jpg" alt="product-thumbnail" class="product-thumbnail">
+                    </div>
+                </div>
+                <div class="shop-text">
+                    <p class="orange-text">sneaker company</p>
+                    <h1>fall limited edition sneakers</h1>
+                    <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+                    <div class="pricing">
+                        <h2>$125.00</h2>
+                        <h3>50%</h3>
+                    </div>
+                    <p style="color: hsl(220, 14%, 75%); font-weight: 700;"><strike>$250.00</strike></p>
+                    <div class="pick-item">
+                        <div class="add-subtract">
+                            <img src="images/icon-minus.svg" alt="" style="margin-top: 8px;" id="icon-minus">
+                            <h4 id="num">0</h4>
+                            <img src="images/icon-plus.svg" alt="" style="margin-top: 4px;" id="icon-plus">
+                        </div>
+                        <div>
+                            <button id="add-btn">
+                                <img src="images/icon-cart.svg" alt="" class="button-icon">Add to cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Slider -->
+    <section id="slider">
+        <img src="images/icon-close.svg" alt="" id="icon-close">
+        <div id="image-slider">
+            <div class="product-slide">
+                <img src="images/image-product-1.jpg" alt="product-1" id="image">
+            </div>
+            <div class="product-slide">
+                <img src="images/image-product-2.jpg" alt="product-2" id="image">
+            </div>
+            <div class="product-slide">
+                <img src="images/image-product-3.jpg" alt="product-3" id="image">
+            </div>
+            <div class="product-slide">
+                <img src="images/image-product-4.jpg" alt="product-4" id="image">
+            </div>
+            <img src="images/icon-previous.svg" alt="icon-previous" id="icon-previous" onclick="setSlides(-1)">
+            <img src="images/icon-next.svg" alt="icon-next" id="icon-next" onclick="setSlides(1)">
+        </div>
+    </section>
+    <!-- Slider -->
+
+    <!-- Cart -->
+    <section class="cart">
+            <h5>Cart</h5>
+            <hr>
+            <p class="empty-cart">Your cart is empty</p>
+        <section class="purchase-cart">
+            <div class="checkout">
+                <div>
+                    <img src="images/image-product-1-thumbnail.jpg" alt="cart-thumbnail" id="cart-thumbnail">
+                </div>
+                <div>
+                    <h6>Fall Limited Edition Sneakers</h6>
+                    <h6>$125 x <span id="amount"></span> <span id="price"></span></h6>
+                </div>
+                <div>
+                    <img src="images/icon-delete.svg" alt="" class="icon-delete">
+                </div>
+            </div>
+            <button type="submit" class="checkout-btn">Checkout</button>
+        </section>
+    </section>
+    <!-- Cart -->
+
+    <script src="main.js"></script>
+</body>
+</html>
