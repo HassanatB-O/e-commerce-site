@@ -1,10 +1,14 @@
 let slider = document.getElementById("slider")
 let clicked = 0;
 
+
+// Add number to cart
 document.getElementById("icon-plus").addEventListener('click', () =>{
     clicked++
     document.getElementById("num").innerText = clicked
     
+    //Add product to cart
+
     document.getElementById("add-btn").addEventListener('click', () =>{       
         localStorage.setItem('cartNumber', clicked) 
         localStorage.getItem('cartNumber')
@@ -17,6 +21,14 @@ document.getElementById("icon-plus").addEventListener('click', () =>{
     })
 
 })
+
+// subtract amount of shoes
+document.getElementById("icon-minus").addEventListener('click', () =>{
+    clicked--
+    document.getElementById("num").innerText = clicked
+})
+
+// Clicking on thumbnails to change the large image
 
 let thumbnails = document.querySelectorAll(".product-thumbnail")
 let images = document.querySelectorAll(".product-image")
@@ -34,11 +46,7 @@ for(let i = 0; i < thumbnails.length; i++){
     })
 }
 
-
-document.getElementById("icon-minus").addEventListener('click', () =>{
-    clicked--
-    document.getElementById("num").innerText = clicked
-})
+// Slider
 
 const displaySlides = (num) =>{
     let slides = document.getElementsByClassName("product-slide")
@@ -62,12 +70,13 @@ const setSlides = (num) =>{
 }
 
 
-document.querySelector(".product-image").addEventListener('click', () =>{
-    slider.style.display = "block"
-    slider.style.backgroundColor = "rgba(0, 0, 0, 0.75)"
-    slider.style.width = "100%"
-})
-
+for (let k = 0; k < images.length; k++){
+    images[k].addEventListener('click', () =>{
+        slider.style.display = "block"
+        slider.style.backgroundColor = "rgba(0, 0, 0, 0.75)"
+        slider.style.width = "100%"
+    })
+}
 
 document.getElementById("icon-close").addEventListener('click', () =>{
     slider.style.display = "none"
