@@ -42,12 +42,11 @@ li{
     margin-left: 15px;
     vertical-align: middle;
     cursor: pointer;
+    border: 2px solid transparent;
 }
 .avatar:hover{
     border: 2px solid hsl(26, 100%, 55%);
     border-radius: 50%;
-    height: 52px;
-    width: 52px;
 }
 .cart-icon{
     vertical-align: middle;
