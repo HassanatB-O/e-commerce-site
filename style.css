@@ -309,6 +309,9 @@ button:hover{
     .shop-section{
         padding: 3em 4em;
     }
+    #icon-close{
+        left: 90%;
+    }
 }
 
 @media screen and (min-width: 600px) and (max-width: 900px){
@@ -331,6 +334,18 @@ button:hover{
         top: 25%;
         width: 40%;
         left: 55%;
+    }
+    #icon-close{
+        left: 90%;
+    }
+}
+
+@media screen and (min-width: 550px) and (max-width: 700px){
+    #icon-previous{
+        left: 8%;
+    }    
+    #icon-next{
+        right: 8%;
     }
 }
 
@@ -410,5 +425,21 @@ button:hover{
         max-width: 100%;
         padding: 2em;
         border-radius: 40px;
+    }
+    #icon-previous{
+        left: 3%;
+    }
+    
+    #icon-next{
+        right: 3%;
+    }
+}
+
+@media screen and (min-width: 550px) and (max-width: 700px){
+    #icon-previous{
+        left: 8%;
+    }    
+    #icon-next{
+        right: 8%;
     }
 }
